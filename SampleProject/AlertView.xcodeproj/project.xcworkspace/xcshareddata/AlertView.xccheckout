@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7048CA65-0F10-4D54-AEF9-693D58638652</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AlertView</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9F0046C6-D13A-405D-BC70-7FE4A7218DAD</key>
+		<string>ssh://github.com/mobilejazz/MJAlertViewManager.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SampleProject/AlertView.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9F0046C6-D13A-405D-BC70-7FE4A7218DAD</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/mobilejazz/MJAlertViewManager.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9F0046C6-D13A-405D-BC70-7FE4A7218DAD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9F0046C6-D13A-405D-BC70-7FE4A7218DAD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MJAlertViewManager</string>
+		</dict>
+	</array>
+</dict>
+</plist>
