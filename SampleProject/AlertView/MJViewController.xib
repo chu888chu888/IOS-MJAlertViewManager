@@ -15,9 +15,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGz-Ad-qB1">
-                    <rect key="frame" x="20" y="266" width="280" height="35"/>
+                    <rect key="frame" x="20" y="167" width="280" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="4LM-fZ-rB9"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="Yhf-W8-Lfe"/>
                         <constraint firstAttribute="height" constant="35" id="eYv-UB-zMP"/>
                         <constraint firstAttribute="width" constant="280" id="oeI-U0-WiV"/>
                     </constraints>
@@ -29,11 +31,13 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oan-7n-UxN">
-                    <rect key="frame" x="20" y="223" width="280" height="35"/>
+                    <rect key="frame" x="20" y="124" width="280" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="280" id="38l-8R-iau"/>
                         <constraint firstAttribute="height" constant="35" id="GWk-U4-aKW"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="JVi-fS-JyP"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="hQg-0H-H4x"/>
                     </constraints>
                     <state key="normal" title="Show Alert View">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,10 +47,12 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnO-Vd-GSQ">
-                    <rect key="frame" x="20" y="309" width="280" height="35"/>
+                    <rect key="frame" x="20" y="210" width="280" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="280" id="A4H-da-np8"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="W5j-2q-pVb"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="k7P-hj-J2h"/>
                         <constraint firstAttribute="height" constant="35" id="o1M-rp-0S9"/>
                     </constraints>
                     <state key="normal" title="Show 2 consequtive Alert Views">
@@ -56,15 +62,80 @@
                         <action selector="mjz_button3Action:" destination="-1" eventType="touchUpInside" id="yty-XP-i2p"/>
                     </connections>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TextField" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9P9-1f-eTA">
+                    <rect key="frame" x="20" y="86" width="280" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="280" id="cxs-ka-xHQ"/>
+                        <constraint firstAttribute="height" constant="30" id="nCJ-Mc-99z"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="64a-ZD-CeO"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLo-VY-Uh1">
+                    <rect key="frame" x="20" y="253" width="280" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="280" id="EQP-dP-8to"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="WiR-VM-7Av"/>
+                        <constraint firstAttribute="height" constant="35" id="Yqe-pn-7So"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="oy7-AG-lYn"/>
+                    </constraints>
+                    <state key="normal" title="Alert View with TextField">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="mjz_button4Action:" destination="-1" eventType="touchUpInside" id="Jg2-R6-Mox"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPF-um-bU2">
+                    <rect key="frame" x="20" y="296" width="280" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="280" id="OGp-qK-TwG"/>
+                        <constraint firstAttribute="height" constant="35" id="f6J-T2-0HS"/>
+                    </constraints>
+                    <state key="normal" title="UIAlertView with TextField">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="mjz_button5Action:" destination="-1" eventType="touchUpInside" id="aj6-XS-oo5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2U-Hq-PkH">
+                    <rect key="frame" x="20" y="339" width="280" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="Xeo-By-zFr"/>
+                        <constraint firstAttribute="width" constant="280" id="wtz-Cx-qFW"/>
+                    </constraints>
+                    <state key="normal" title="UIAlertView">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="mjz_button6Action:" destination="-1" eventType="touchUpInside" id="gvD-gL-5yq"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="VGz-Ad-qB1" secondAttribute="centerX" id="H3f-0H-D6t"/>
-                <constraint firstItem="AnO-Vd-GSQ" firstAttribute="top" secondItem="VGz-Ad-qB1" secondAttribute="bottom" constant="8" id="YYa-ML-dvG"/>
-                <constraint firstAttribute="centerX" secondItem="Oan-7n-UxN" secondAttribute="centerX" id="adT-HP-60D"/>
-                <constraint firstAttribute="centerX" secondItem="AnO-Vd-GSQ" secondAttribute="centerX" id="duX-aG-x7a"/>
-                <constraint firstAttribute="centerY" secondItem="VGz-Ad-qB1" secondAttribute="centerY" id="tZE-UK-JN7"/>
-                <constraint firstItem="VGz-Ad-qB1" firstAttribute="top" secondItem="Oan-7n-UxN" secondAttribute="bottom" constant="8" id="zwD-j5-FXh"/>
+                <constraint firstItem="hPF-um-bU2" firstAttribute="top" secondItem="YLo-VY-Uh1" secondAttribute="bottom" constant="8" id="2kE-p1-juR"/>
+                <constraint firstAttribute="centerX" secondItem="Oan-7n-UxN" secondAttribute="centerX" id="AVP-fk-SF1"/>
+                <constraint firstAttribute="centerX" secondItem="9P9-1f-eTA" secondAttribute="centerX" id="OY7-qP-AVl"/>
+                <constraint firstItem="VGz-Ad-qB1" firstAttribute="top" secondItem="Oan-7n-UxN" secondAttribute="bottom" constant="8" id="OvV-ag-Pzk"/>
+                <constraint firstItem="AnO-Vd-GSQ" firstAttribute="top" secondItem="VGz-Ad-qB1" secondAttribute="bottom" constant="8" id="TFf-D8-dUf"/>
+                <constraint firstItem="9P9-1f-eTA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="86" id="Zra-0I-BSw"/>
+                <constraint firstItem="Oan-7n-UxN" firstAttribute="top" secondItem="9P9-1f-eTA" secondAttribute="bottom" constant="8" id="bm4-Ej-XZC"/>
+                <constraint firstAttribute="centerX" secondItem="AnO-Vd-GSQ" secondAttribute="centerX" id="gGW-hi-6Ou"/>
+                <constraint firstItem="YLo-VY-Uh1" firstAttribute="top" secondItem="AnO-Vd-GSQ" secondAttribute="bottom" constant="8" id="iQE-19-fOS"/>
+                <constraint firstItem="o2U-Hq-PkH" firstAttribute="top" secondItem="hPF-um-bU2" secondAttribute="bottom" constant="8" id="j6U-lp-lXs"/>
+                <constraint firstAttribute="centerX" secondItem="hPF-um-bU2" secondAttribute="centerX" id="mHY-OR-Zdu"/>
+                <constraint firstAttribute="centerX" secondItem="VGz-Ad-qB1" secondAttribute="centerX" id="qQi-zL-x1z"/>
+                <constraint firstAttribute="centerX" secondItem="o2U-Hq-PkH" secondAttribute="centerX" id="rSV-6Y-QAK"/>
+                <constraint firstAttribute="centerX" secondItem="YLo-VY-Uh1" secondAttribute="centerX" id="w87-U4-3jG"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

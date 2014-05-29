@@ -95,13 +95,4 @@
  **/
 - (void)popAlertView;
 
-/** *************************************** **
- * @name Managing the alert view stack
- ** *************************************** **/
-
-/**
- * The window that will be used to display alert views as subviews. If nil, the `keyWindow` of the UIApplication will be used instead. Default value is nil.
- **/
-@property (nonatomic, strong) UIWindow *window;
-
 @end

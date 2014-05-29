@@ -10,7 +10,7 @@
 
 #import "MJAlertView.h"
 
-@interface MJViewController ()
+@interface MJViewController () <UITextFieldDelegate>
 
 @end
 
@@ -41,7 +41,7 @@
 - (IBAction)mjz_button1Action:(id)sender
 {
     MJAlertView *alertView = [[MJAlertView alloc] initWithTitle:@"Welcome"
-                                                       subtitle:@"This is a subtitle"
+                                                       subtitle:nil
                                                         message:@"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                                               cancelButtonTitle:@"Dismiss"];
     
@@ -52,7 +52,7 @@
 {
     {
         MJAlertView *alertView = [[MJAlertView alloc] initWithTitle:@"First AlertView"
-                                                           subtitle:@"This is a subtitle"
+                                                           subtitle:nil
                                                             message:@"Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                                                   cancelButtonTitle:@"Dismiss"];
         [alertView show];
@@ -60,7 +60,7 @@
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         MJAlertView *alertView = [[MJAlertView alloc] initWithTitle:@"Second AlertView"
-                                                           subtitle:@"This is a subtitle"
+                                                           subtitle:nil
                                                             message:@"Labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                                                   cancelButtonTitle:@"Dismiss"];
         
@@ -72,7 +72,7 @@
 {
     {
         MJAlertView *alertView = [[MJAlertView alloc] initWithTitle:@"First AlertView"
-                                                           subtitle:@"This is a subtitle"
+                                                           subtitle:nil
                                                             message:@"Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                                                   cancelButtonTitle:@"Dismiss"];
         
@@ -81,7 +81,7 @@
     
     {
         MJAlertView *alertView = [[MJAlertView alloc] initWithTitle:@"Second AlertView"
-                                                           subtitle:@"This is a subtitle"
+                                                           subtitle:nil
                                                             message:@"Labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                                                   cancelButtonTitle:@"Dismiss"];
         
@@ -89,4 +89,59 @@
     }
 }
 
+- (IBAction)mjz_button4Action:(id)sender
+{
+    MJAlertView *alertView = [[MJAlertView alloc] initWithTitle:@"First AlertView"
+                                                       subtitle:@"TextField"
+                                                        message:@"\n"
+                                              cancelButtonTitle:@"Dismiss"];
+
+    [alertView sizeToFit];
+    
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 260, 35)];
+    textField.placeholder = @"TextField";
+    textField.delegate = self;
+    textField.borderStyle = UITextBorderStyleRoundedRect;
+    textField.returnKeyType = UIReturnKeyDone;
+    
+    textField.center = CGPointMake(alertView.bounds.size.width/2.0f, alertView.bounds.size.height/2.0f + 14);
+    [alertView addSubview:textField];
+    
+    [alertView show];
+}
+
+- (IBAction)mjz_button5Action:(id)sender
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"AlertView"
+                                                        message:@""
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Dismiss"
+                                              otherButtonTitles:nil];
+    
+    alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alertView textFieldAtIndex:0].delegate = self;
+    
+    [alertView show];
+}
+
+- (IBAction)mjz_button6Action:(id)sender
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"AlertView"
+                                                        message:@"Labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Dismiss"
+                                              otherButtonTitles:nil];
+    [alertView show];
+}
+
+#pragma mark - Protocol
+#pragma mark UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return NO;
+}
+
 @end
+

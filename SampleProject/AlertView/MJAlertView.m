@@ -87,6 +87,9 @@ UIImage* resizableImageWithColor(UIColor *color)
         _cancelButtonIndex = NSNotFound;
         _destructiveButtonIndex = NSNotFound;
         
+        self.layer.cornerRadius = 5.0f;
+        self.clipsToBounds = YES;
+        
         [self mjz_initAlertView];
     }
     return self;

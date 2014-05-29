@@ -16,19 +16,19 @@
 {
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    NSLog(@"APP WINDOW: %@", [_window description]);
+    
+    
     // -- Customizing the alert view manager -- //
     MJAlertViewManager *manager = [MJAlertViewManager defaultManager];
     
     // Animations
     manager.animationDuration = 0.25;
-    manager.appearingAnimationTransform = CGAffineTransformMakeScale(1.2f, 1.2f);
-    manager.disappearingAnimationTransform = CGAffineTransformMakeScale(0.8f, 0.8f);
+    manager.appearingAnimationTransform = CGAffineTransformMakeScale(1.3f, 1.3f);
+    manager.disappearingAnimationTransform = CGAffineTransformMakeScale(0.9f, 0.9f);
     
     // Background
-    manager.backroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6f];
-    
-    // Window
-    manager.window = _window; // <-- if nil, the "keyWindow" will be used
+    manager.backroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4f];
     
     // -- Setting up the view controller -- //
     MJViewController *viewController = [[MJViewController alloc] initWithNibName:nil bundle:nil];
